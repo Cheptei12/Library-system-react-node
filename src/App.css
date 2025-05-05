@@ -1,0 +1,177 @@
+Layout */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #f4f4f4;
+  padding: 20px;
+  height: 100vh;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu-item:hover {
+  background: #c3e6cb;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #05046e;
+  color: white;
+  position: fixed;
+  width: 97%;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.buttons button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  background: white;
+  color: #2d6a4f;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background: #ddd;
+}
+
+/* Main Container - Adjusted for Spacing */
+.main-content {
+  margin-top: 120px; /* Ensure it's not covered by the header */
+  padding: 5px;
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+  gap: 1px; /* Reduced space between items */
+  justify-items: center;
+}
+
+.main-content {
+  margin-top: 120px;
+  padding: 5px;
+  padding-top: calc(70px + 15px * 2);
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px; /* Reduced gap */
+  justify-items: center;
+}
+
+/* Fix header overlap issue */
+.page-content {
+  padding-top: 80px; /* Adjust this value based on your header height */
+}
+
+.grid-item {
+  background: #e9ecef;
+  padding: 3px; /* Slightly reduced padding */
+  width: 90%;
+  height: 50px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.grid-item svg {
+  width: 20px; /* Adjust the SVG size as needed */
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+      grid-template-columns: 1fr;
+      gap: 1px; /* Even smaller gap for mobile */
+      
+  }
+
+  .grid-item {
+      width: 95%;
+      height: 60px;
+  }
+}
+
+/* App.css */
+.sidebar {
+  overflow-y: auto;
+}
+
+.sidebar-item:hover {
+  background-color: #343a40 !important; /* Darker shade on hover */
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn {
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+  opacity: 0.9; /* Slight fade */
+}
+
+.logo {
+  border-radius: 50%;
+}
+
+/* App.css */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.sidebar {
+  overflow-y: auto;
+}
+
+.sidebar-item:hover {
+  background-color: #343a40 !important; /* Darker shade on hover */
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn {
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+  opacity: 0.9; /* Slight fade */
+}
+
+.logo {
+  border-radius: 50%;
+}
